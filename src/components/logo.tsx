@@ -4,6 +4,7 @@ export function LaunchMark() {
   const raw = useId().replace(/:/g, "");
   const glass = `${raw}-glass`;
   const flame = `${raw}-flame`;
+  const core = `${raw}-core`;
 
   return (
     <svg className="launch-mark" viewBox="0 0 72 72" aria-hidden>
@@ -15,7 +16,12 @@ export function LaunchMark() {
         </radialGradient>
         <linearGradient id={flame} x1="0" y1="1" x2="0" y2="0">
           <stop offset="0%" stopColor="var(--color-primary)" stopOpacity="0" />
-          <stop offset="40%" stopColor="var(--color-primary)" />
+          <stop offset="55%" stopColor="var(--color-primary)" />
+          <stop offset="100%" stopColor="var(--color-primary)" />
+        </linearGradient>
+        <linearGradient id={core} x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stopColor="var(--color-primary)" stopOpacity="0" />
+          <stop offset="35%" stopColor="var(--color-primary)" />
           <stop offset="100%" stopColor="var(--color-fg)" />
         </linearGradient>
       </defs>
@@ -25,7 +31,13 @@ export function LaunchMark() {
       <circle cx="56" cy="18" r="0.7" fill="var(--color-accent)" />
       <circle cx="58" cy="44" r="0.6" fill="var(--color-fg)" />
       <g className="launch-mark-ship">
-        <path className="launch-mark-flame" fill={`url(#${flame})`} d="M31.5 46.5c1.4 7 2.4 12 4.5 16 2.1-4 3.1-9 4.5-16-2.4 2.2-6.6 2.2-9 0Z" />
+        <g className="launch-mark-plume">
+          <path className="launch-mark-tongue launch-mark-tongue-l" fill={`url(#${flame})`} d="M32 47c-2 5-5 9-3.2 14 2.4-4 3.4-8 4.6-14-0.6 1-1 1-1.4 0Z" />
+          <path className="launch-mark-tongue launch-mark-tongue-r" fill={`url(#${flame})`} d="M40 47c2 5 5 9 3.2 14-2.4-4-3.4-8-4.6-14 0.6 1 1 1 1.4 0Z" />
+          <path className="launch-mark-tongue launch-mark-tongue-c" fill={`url(#${core})`} d="M33.2 46.2c0.8 6 1.6 11 2.8 15 1.2-4 2-9 2.8-15-1.6 1.6-4 1.6-5.6 0Z" />
+          <circle className="launch-mark-ember launch-mark-ember-a" cx="34.2" cy="52" r="0.7" fill="var(--color-fg)" />
+          <circle className="launch-mark-ember launch-mark-ember-b" cx="38" cy="50.5" r="0.55" fill="var(--color-primary)" />
+        </g>
         <path fill="var(--color-accent)" d="M29.5 38.5 22 50.5h8.2Z" />
         <path fill="var(--color-accent)" d="M42.5 38.5 50 50.5h-8.2Z" />
         <path fill="var(--color-primary)" d="M30 27.5 36 13l6 14.5Z" />

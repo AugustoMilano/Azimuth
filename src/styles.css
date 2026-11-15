@@ -345,10 +345,71 @@
   animation: launch-rise 2.6s ease-in-out infinite;
 }
 
-.launch-mark-flame {
+.launch-mark-tongue {
   transform-box: fill-box;
   transform-origin: center top;
-  animation: launch-flame 0.45s ease-in-out infinite;
+}
+
+.launch-mark-tongue-c {
+  animation: flame-core 0.32s ease-in-out infinite;
+}
+
+.launch-mark-tongue-l {
+  animation: flame-side 0.4s ease-in-out infinite;
+}
+
+.launch-mark-tongue-r {
+  animation: flame-side 0.48s ease-in-out infinite reverse;
+}
+
+.launch-mark-ember {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: flame-ember 0.7s ease-in infinite;
+}
+
+.launch-mark-ember-b {
+  animation-duration: 0.85s;
+  animation-delay: 0.32s;
+}
+
+@keyframes flame-core {
+  0%,
+  100% {
+    transform: scaleY(0.72) scaleX(0.86);
+    opacity: 0.8;
+  }
+  35% {
+    transform: scaleY(1.18) scaleX(1.08);
+    opacity: 1;
+  }
+  68% {
+    transform: scaleY(0.88) scaleX(0.74);
+    opacity: 0.9;
+  }
+}
+
+@keyframes flame-side {
+  0%,
+  100% {
+    transform: scaleY(0.62) skewX(-8deg);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleY(1.22) skewX(10deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes flame-ember {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(7px) scale(0.4);
+    opacity: 0;
+  }
 }
 
 @keyframes launch-rise {
@@ -358,18 +419,6 @@
   }
   50% {
     transform: translateY(-2px);
-  }
-}
-
-@keyframes launch-flame {
-  0%,
-  100% {
-    transform: scaleY(0.82);
-    opacity: 0.7;
-  }
-  50% {
-    transform: scaleY(1.12);
-    opacity: 1;
   }
 }
 
@@ -387,7 +436,8 @@
   .sky-stars-near,
   .sky-meteor,
   .launch-mark-ship,
-  .launch-mark-flame,
+  .launch-mark-tongue,
+  .launch-mark-ember,
   .glass-orb,
   .glass-orb-field,
   .glass-orb-rim {
