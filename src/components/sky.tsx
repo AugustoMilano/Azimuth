@@ -55,9 +55,15 @@ export function Sky() {
   useSkyPointer();
   return (
     <div className="sky" aria-hidden>
-      <div className="sky-shift">
-        <div className="sky-stars" />
+      <div className="sky-layer sky-far">
+        <div className="sky-stars sky-stars-far" />
+      </div>
+      <div className="sky-layer sky-mid">
+        <div className="sky-stars sky-stars-mid" />
         <div className="sky-meteor" />
+      </div>
+      <div className="sky-layer sky-near">
+        <div className="sky-stars sky-stars-near" />
       </div>
     </div>
   );
@@ -67,6 +73,7 @@ export function GlassOrb({ size = "sm" }: { size?: "sm" | "lg" }) {
   return (
     <div className="glass-orb-tilt" aria-hidden>
       <div className={size === "lg" ? "glass-orb glass-orb-lg" : "glass-orb"}>
+        <div className="glass-orb-dust" />
         <div className="glass-orb-field" />
         <div className="glass-orb-rim" />
         <div className="glass-orb-sheen" />
