@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { PageHeader, Poster, SaveLaunchButton, SaveStoryButton } from "@/components/bits";
+import { LaunchMark } from "@/components/logo";
 import { GlassOrb } from "@/components/sky";
 import { formatNet, formatStamp, utcDay, utcMonth } from "@/lib/space/format";
 import { useSaved } from "@/lib/space/saved";
@@ -33,7 +34,7 @@ function SavedPage() {
 
   return (
     <div className="space-y-5 pb-8">
-      <PageHeader title="Saved" mark={mounted && !empty ? <GlassOrb /> : undefined} />
+      <PageHeader title="Saved" mark={<LaunchMark />} />
       <p className="px-5 text-sm text-muted">Pins stay on this device.</p>
       {!mounted ? <p className="px-5 text-sm text-muted">Opening pins…</p> : null}
       {mounted && empty ? (

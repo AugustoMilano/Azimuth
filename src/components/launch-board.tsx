@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { FeedNote, PageHeader, Poster, RefreshButton, SaveLaunchButton, SearchField, StatusChip } from "@/components/bits";
 import { Countdown, LocalNet } from "@/components/countdown";
-import { GlassOrb } from "@/components/sky";
+import { LaunchMark } from "@/components/logo";
 import { cn } from "@/lib/cn";
 import { formatNet, isCoarse, isTimed, utcClock, utcDay, utcDayHeading, utcMonth, utcMonthHeading } from "@/lib/space/format";
 import { matchesLaunch, splitLaunches } from "@/lib/space/select";
@@ -34,7 +34,7 @@ export function LaunchBoard() {
     <div className="space-y-5 pb-6">
       <PageHeader
         title="Launches"
-        mark={<GlassOrb />}
+        mark={<LaunchMark />}
         action={<RefreshButton pending={query.isFetching} onClick={() => void query.refetch()} />}
       />
       <FeedNote fetchedAt={data.fetchedAt} source={data.source} />

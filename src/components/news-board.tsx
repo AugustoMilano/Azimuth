@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { FeedNote, PageHeader, Poster, RefreshButton, SaveStoryButton, SearchField } from "@/components/bits";
-import { GlassOrb } from "@/components/sky";
+import { LaunchMark } from "@/components/logo";
 import { formatStamp } from "@/lib/space/format";
 import { matchesArticle } from "@/lib/space/select";
 import type { Article } from "@/lib/space/types";
@@ -19,7 +19,7 @@ export function NewsBoard() {
     <div className="space-y-5 pb-6">
       <PageHeader
         title="News"
-        mark={<GlassOrb />}
+        mark={<LaunchMark />}
         action={<RefreshButton pending={query.isFetching} onClick={() => void query.refetch()} />}
       />
       <FeedNote fetchedAt={data.fetchedAt} source={data.source} />
