@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Launches · Azimuth",
+      "hasCanvas": false,
+      "bodyTextLen": 1674,
+      "bodyTextHash": "52d4c675112c57302f2d2e20e06413b7dede264ecb6104bdec93a00c11c4151d",
+      "bodyTextPrefix": "AZIMUTH Launches Updated 44 seconds ago · times in UTC All Go Cr",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Launches · Azimuth",
+      "hasCanvas": false,
+      "bodyTextLen": 1674,
+      "bodyTextHash": "75c35b6c95dfcf30e7a2ec9df7731c81e03b2629da211c2002dfedf114568f67",
+      "bodyTextPrefix": "AZIMUTH Launches Updated 46 seconds ago · times in UTC All Go Cr",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

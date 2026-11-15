@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/news",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "News · Azimuth",
+      "hasCanvas": false,
+      "bodyTextLen": 1754,
+      "bodyTextHash": "422341bba0ff2f26ba1f7a1913789c4505d867fa4329f237861e54edac28e98a",
+      "bodyTextPrefix": "AZIMUTH News Updated 4 minutes ago · times in UTC ARSTECHNICA Wi",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/news-smoke.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "News · Azimuth",
+      "hasCanvas": false,
+      "bodyTextLen": 1754,
+      "bodyTextHash": "422341bba0ff2f26ba1f7a1913789c4505d867fa4329f237861e54edac28e98a",
+      "bodyTextPrefix": "AZIMUTH News Updated 4 minutes ago · times in UTC ARSTECHNICA Wi",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/news-smoke-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/news-smoke.json"
+}
