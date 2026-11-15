@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Bookmark } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PageHeader, Poster, SaveLaunchButton, SaveStoryButton } from "@/components/bits";
+import { GlassOrb } from "@/components/sky";
 import { formatNet, formatStamp, utcDay, utcMonth } from "@/lib/space/format";
 import { useSaved } from "@/lib/space/saved";
 import { useBriefing } from "@/lib/space/use-briefing";
@@ -33,13 +33,13 @@ function SavedPage() {
 
   return (
     <div className="space-y-5 pb-8">
-      <PageHeader title="Saved" />
+      <PageHeader title="Saved" mark={mounted && !empty ? <GlassOrb /> : undefined} />
       <p className="px-5 text-sm text-muted">Pins stay on this device.</p>
       {!mounted ? <p className="px-5 text-sm text-muted">Opening pins…</p> : null}
       {mounted && empty ? (
-        <div className="mx-5 rounded-card bg-surface px-5 py-10 text-center">
-          <Bookmark className="mx-auto size-6 text-primary" />
-          <p className="mt-3 text-sm text-muted">Nothing pinned yet. Save a launch or a story and it will wait here.</p>
+        <div className="mx-5 flex flex-col items-center rounded-card bg-surface px-5 py-8 text-center">
+          <GlassOrb size="lg" />
+          <p className="mt-4 text-sm text-muted">Nothing pinned yet. Save a launch or a story and it will wait here.</p>
         </div>
       ) : null}
       {mounted && savedLaunches.length > 0 ? (

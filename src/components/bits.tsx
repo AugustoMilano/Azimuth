@@ -11,12 +11,15 @@ function useMounted() {
   return mounted;
 }
 
-export function PageHeader({ title, action }: { title: string; action?: ReactNode }) {
+export function PageHeader({ title, action, mark }: { title: string; action?: ReactNode; mark?: ReactNode }) {
   return (
     <header className="flex items-end justify-between gap-3 px-5 pt-6 pb-2">
-      <div>
-        <p className="text-xs font-semibold tracking-widest text-primary uppercase">Azimuth</p>
-        <h1 className="mt-1 text-3xl font-semibold tracking-tight">{title}</h1>
+      <div className="flex min-w-0 items-end gap-3">
+        {mark}
+        <div className="min-w-0">
+          <p className="text-xs font-semibold tracking-widest text-primary uppercase">Azimuth</p>
+          <h1 className="mt-1 text-3xl font-semibold tracking-tight">{title}</h1>
+        </div>
       </div>
       {action}
     </header>
@@ -52,7 +55,9 @@ export function SearchField({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        type="search"
+        type="text"
+        enterKeyHint="search"
+        autoComplete="off"
         className="min-w-0 flex-1 bg-transparent text-sm text-fg outline-none placeholder:text-muted"
       />
       {value ? (

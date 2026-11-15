@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Bookmark, Newspaper, Rocket } from "lucide-react";
 import type { ReactNode } from "react";
+import { Sky } from "@/components/sky";
 import { cn } from "@/lib/cn";
 
 const TABS = [
@@ -14,8 +15,9 @@ export function AppShell({ children }: { children: ReactNode }) {
   const detail = path.startsWith("/launch/") || path.startsWith("/story/");
 
   return (
-    <div className="min-h-dvh bg-bg text-fg">
-      <div className={cn("mx-auto w-full max-w-md", detail ? "safe-bottom" : "nav-pad")}>{children}</div>
+    <div className="relative min-h-dvh bg-bg text-fg">
+      <Sky />
+      <div className={cn("relative z-10 mx-auto w-full max-w-md", detail ? "safe-bottom" : "nav-pad")}>{children}</div>
       {detail ? null : (
         <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-surface" aria-label="Primary">
           <div className="safe-bottom mx-auto flex max-w-md px-2">
