@@ -136,7 +136,7 @@ export function FeedNote({ fetchedAt, source }: { fetchedAt: string; source: "li
   );
 }
 
-export function Poster({ src, label, className }: { src: string | null; label: string; className?: string }) {
+export function Poster({ src, label, alt, className }: { src: string | null; label: string; alt: string; className?: string }) {
   const [failed, setFailed] = useState(false);
   const letters = label
     .split(/\s+/)
@@ -148,8 +148,10 @@ export function Poster({ src, label, className }: { src: string | null; label: s
 
   if (!src || failed) {
     return (
-      <div className={cn("flex h-full w-full items-center justify-center bg-surface-3 text-accent", className)} aria-hidden>
-        <span className="text-2xl font-semibold tracking-widest">{letters || "AZ"}</span>
+      <div role="img" aria-label={alt} className={cn("flex h-full w-full items-center justify-center bg-surface-3 text-accent", className)}>
+        <span className="text-2xl font-semibold tracking-widest" aria-hidden>
+          {letters || "AZ"}
+        </span>
       </div>
     );
   }
@@ -157,7 +159,7 @@ export function Poster({ src, label, className }: { src: string | null; label: s
   return (
     <img
       src={src}
-      alt=""
+      alt={alt}
       onError={() => setFailed(true)}
       referrerPolicy="no-referrer"
       className={cn("h-full w-full object-cover", className)}

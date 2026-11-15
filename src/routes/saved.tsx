@@ -95,7 +95,7 @@ function SavedStoryRow({ article }: { article: Article }) {
     <div className="flex items-center">
       <Link to="/story/$id" params={{ id: String(article.id) }} className="flex min-w-0 flex-1 items-center gap-3 py-3 pl-3">
         <div className="size-14 shrink-0 overflow-hidden rounded-2xl">
-          <Poster src={article.image} label={article.site} />
+          <Poster src={article.image} label={article.site} alt={`${article.title}, from ${article.site}`} />
         </div>
         <div className="min-w-0">
           <p className="line-clamp-2 font-serif text-base leading-snug font-medium">{article.title}</p>

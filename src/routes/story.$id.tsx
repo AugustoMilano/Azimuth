@@ -38,7 +38,7 @@ function StoryDetail() {
       <div className="px-5">
         <div className="overflow-hidden rounded-card bg-surface">
           <div className="h-56">
-            <Poster src={article.image} label={article.site} />
+            <Poster src={article.image} label={article.site} alt={`${article.title}, from ${article.site}`} />
           </div>
         </div>
         <p className="mt-5 text-xs font-medium tracking-widest text-accent uppercase">{article.site}</p>

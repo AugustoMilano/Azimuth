@@ -82,7 +82,7 @@ function NextLaunch({ launch }: { launch: Launch }) {
     <article className="overflow-hidden rounded-card border border-line bg-surface">
       <div className="h-1 bg-primary" />
       <div className="relative h-52">
-        <Poster src={launch.image} label={launch.vehicle} />
+        <Poster src={launch.image} label={launch.vehicle} alt={`${launch.mission} on a ${launch.vehicle}`} />
         <div className="scrim pointer-events-none absolute inset-0" />
         <div className="absolute top-3 left-3">
           <StatusChip abbrev={launch.statusAbbrev} status={launch.status} />
