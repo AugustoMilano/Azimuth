@@ -26,3 +26,8 @@ The dev server listens on port 8080.
 - News from the [Spaceflight News API](https://api.spaceflightnewsapi.net/)
 
 If a feed is unavailable, the app falls back to a briefing packed in the repo.
+
+## License
+
+[MIT](LICENSE)
+

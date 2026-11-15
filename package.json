@@ -1,5 +1,7 @@
 {
-  "name": "app-builder-workspace",
+  "name": "azimuth",
+  "description": "Upcoming space launches and recent space news.",
+  "license": "MIT",
   "private": true,
   "sideEffects": false,
   "type": "module",
