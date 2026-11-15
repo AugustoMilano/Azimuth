@@ -3,3 +3,12 @@ node_modules/
 .github_repo
 .env
 .env.*
+node_modules/
+.project_id
+.github_repo
+.env
+.env.*
+.grok/
+.vercel/
+screenshots/
+artifacts/
