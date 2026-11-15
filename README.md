@@ -6,9 +6,9 @@ The next launch has a live countdown in UTC and your local time. Filter by go, c
 
 
 <p align="center">
-  <img src="screenshots/launches.png" alt="Launches tab" width="220" />
-  <img src="screenshots/news.png" alt="News tab" width="220" />
-  <img src="screenshots/saved.png" alt="Saved tab" width="220" />
+  <img src="screenshots/launches.png" width="220" alt="Launches tab. A live countdown to Amazon Leo on a Vulcan rocket at Space Launch Complex 41, with All, Go, Crewed, and Science filters." />
+  <img src="screenshots/news.png" width="220" alt="News tab. The lead story is Ars Technica on SpaceX catching a Starship, followed by a SpacePolicyOnline dispatch." />
+  <img src="screenshots/saved.png" width="220" alt="Saved tab. A pinned Amazon Leo launch on November 15 and a pinned story about the Starship catch." />
 </p>
 
 ## Run
