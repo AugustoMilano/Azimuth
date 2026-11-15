@@ -35,6 +35,21 @@ export function utcDay(iso: string) {
   return String(new Date(iso).getUTCDate());
 }
 
+export function utcDayHeading(iso: string) {
+  const d = new Date(iso);
+  return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`;
+}
+
+export function utcMonthHeading(iso: string) {
+  const d = new Date(iso);
+  return `${MONTHS_LONG[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+}
+
+export function utcClock(iso: string) {
+  const d = new Date(iso);
+  return `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`;
+}
+
 export function formatStamp(iso: string) {
   const d = new Date(iso);
   return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} · ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())} UTC`;
