@@ -54,18 +54,20 @@ function useSkyPointer() {
 export function Sky() {
   useSkyPointer();
   return (
-    <div className="sky" aria-hidden>
-      <div className="sky-layer sky-far">
-        <div className="sky-stars sky-stars-far" />
+    <>
+      <div className="sky" aria-hidden>
+        <div className="sky-layer sky-far">
+          <div className="sky-stars sky-stars-far" />
+        </div>
+        <div className="sky-layer sky-mid">
+          <div className="sky-stars sky-stars-mid" />
+        </div>
+        <div className="sky-layer sky-near">
+          <div className="sky-stars sky-stars-near" />
+        </div>
       </div>
-      <div className="sky-layer sky-mid">
-        <div className="sky-stars sky-stars-mid" />
-        <div className="sky-meteor" />
-      </div>
-      <div className="sky-layer sky-near">
-        <div className="sky-stars sky-stars-near" />
-      </div>
-    </div>
+      <div className="sky-meteor" aria-hidden />
+    </>
   );
 }
 
